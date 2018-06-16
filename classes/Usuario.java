@@ -1,7 +1,7 @@
 
-public class Usuario extends Elemento {
+abstract public class Usuario extends Elemento {
 
-	protected String nome, login, senha;
+	private protected String nome, login, senha;
 
 	public Usuario() {
 		super();

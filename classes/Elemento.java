@@ -1,6 +1,6 @@
 
-public class Elemento {
-	protected int id;
+abstract public class Elemento {
+	private protected int id;
 	
 	public Elemento() {
 	}

@@ -1,7 +1,7 @@
 
-public class Produto extends Elemento {
+abstract public class Produto extends Elemento {
 
-	protected String nome, descricao, preco;
+	private protected String nome, descricao, preco;
 
 	public Produto() {
 		super();
