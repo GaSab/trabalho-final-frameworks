@@ -1,19 +1,19 @@
 
 abstract public class Elemento {
-	private protected int id;
+	private protected String nome;
 	
 	public Elemento() {
 	}
 	
-	public Elemento (int i) {
-		id = i;
+	public Elemento (String str) {
+		nome = str;
 	}
 
-	public int getId() {
-		return id;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setNome(String str) {
+		nome = str;
 	}
 }
