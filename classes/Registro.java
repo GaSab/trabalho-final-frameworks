@@ -1,3 +1,5 @@
+package classes;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,13 +9,10 @@ public class Registro {
 
 	public Registro() {
 		// exemplo
-		reg.put(1, new Elemento());
-		reg.put(2, new Usuario("José da Silva", "jose@gmail.com", "123456"));
-		reg.put(3, new Produto("Mouse óptico", "made by Multilaser", 18.0));
+		reg.put(1, new Produto("Mouse óptico", "made by Multilaser", 18.0));
 	}
 	
 	public void adicionar(Integer i, Elemento e) {
-//		reg.putIfAbsent(i, e);
 		if(reg.containsKey(i) == false)
 			reg.put(i, e);
 	} // adicionar um elemento à cadeia, se a chave não tiver sido usada

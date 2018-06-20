@@ -1,5 +1,7 @@
+package classes;
 
-abstract public class Produto extends Elemento {
+
+public class Produto extends Elemento {
 
 	protected String descricao;
 	protected double preco;
