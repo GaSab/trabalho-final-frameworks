@@ -1,22 +1,21 @@
 
 abstract public class Produto extends Elemento {
 
-	private protected String nome, descricao, preco;
+	protected String descricao;
+	protected double preco;
 
 	public Produto() {
 		super();
 	}
 
-	public Produto(int i) {
-		super(i);
+	public Produto(String str) {
+		super(str);
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String str) {
-		nome = str;
+	public Produto(String str1, String str2, double d) {
+		super(str1);
+		descricao = str2;
+		preco = d;
 	}
 
 	public String getDescricao() {
@@ -27,12 +26,12 @@ abstract public class Produto extends Elemento {
 		descricao = str;
 	}
 
-	public String getPreco() {
+	public double getPreco() {
 		return preco;
 	}
 
-	public void setPreco(String str) {
-		preco = str;
+	public void setPreco(double d) {
+		preco = d;
 	}
 
 }
