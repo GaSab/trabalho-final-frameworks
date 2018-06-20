@@ -9,14 +9,20 @@ public class Registro {
 
 	public Registro() {
 		reg = new HashMap<Integer, Elemento>();
-		// exemplo
-		// reg.put(1, new Produto("Mouse óptico", "made by Multilaser", 18.0));
 	}
 	
+	public Map<Integer, Elemento> getRegistro() {
+		return reg;
+	}
+
+	public void setRegistro(Map<Integer, Elemento> m) {
+		reg = m;
+	}
+
 	public void adicionar(Integer i, Elemento e) {
 		if(reg.containsKey(i) == false)
 			reg.put(i, e);
-	} // adicionar um elemento à cadeia, se a chave não tiver sido usada
+	} // adicionar um elemento a cadeia, se a chave nao tiver sido usada
 	
 	public void excluir(Integer i) {
 		reg.remove(i);
@@ -26,7 +32,7 @@ public class Registro {
 	    if(reg.containsKey(i) == true) {
 	    	// reg.put(i, e);
 	        reg.replace(i, e);
-	    } // atualiza o elemento correspondente à chave
+	    } // atualiza o elemento correspondente a chave
 	}
 
 	public Elemento buscar(Integer i) {
@@ -34,6 +40,11 @@ public class Registro {
 	        return reg.get(i);
 	    }
 	    return null;
-	} // retorna o elemento correspondente à chave
+	} // retorna o elemento correspondente a chave
+
+	@Override
+	public String toString() {
+		return "Registro [reg=" + reg + "]";
+	}
 
 }

@@ -5,7 +5,7 @@ import framework.Usuario;
 public class Cliente extends Usuario {
 
 	private double carteira;
-	private Lista listaCompras;
+	private Lista listaCompras = new Lista();
 	
 	public Cliente() {
 		super();
@@ -31,6 +31,10 @@ public class Cliente extends Usuario {
 	public void setCarteira(double d) {
 		carteira = d;
 	}
+	
+	public void adicionarFundos(double d) {
+		carteira += d;
+	}
 
 	public Lista getListaCompras() {
 		return listaCompras;
@@ -38,6 +42,11 @@ public class Cliente extends Usuario {
 
 	public void setListaCompras(Lista reg) {
 		listaCompras = reg;
+	}
+
+	@Override
+	public String toString() {
+		return "Cliente [nome=" + nome + ", carteira=" + carteira + ", listaCompras=" + listaCompras + "]";
 	}
 
 }

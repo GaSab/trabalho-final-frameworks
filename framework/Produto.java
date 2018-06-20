@@ -36,4 +36,9 @@ public class Produto extends Elemento {
 		preco = d;
 	}
 
+	@Override
+	public String toString() {
+		return "Produto [nome=" + nome + ", descricao=" + descricao + ", preco=" + preco + "]";
+	}
+
 }

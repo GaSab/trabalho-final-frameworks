@@ -11,16 +11,28 @@ public class Main {
 	public static void main(String[] args) {
 		listaClientes = new Lista();
 
-		Cliente c1 = new Cliente("Jose", "jose@ufc.br", "123456");
-		Cliente c2 = new Cliente("Joao", "joao@ufc.br", "654321");
-		listaClientes.adicionar(1, c1);
-		listaClientes.adicionar(2, c2);
+		Cliente jose = new Cliente("Jose", "jose@ufc.br", "123456");
+		Cliente joao = new Cliente("Joao", "joao@ufc.br", "654321");
+		jose.adicionarFundos(200.0);
+		listaClientes.adicionar(1, jose);
+		listaClientes.adicionar(2, joao);
+		((Cliente) listaClientes.getRegistro().get(2)).adicionarFundos(100.0);
+		System.out.println(listaClientes.toString());
 		
 		estoque = new Lista();
-		Produto p1 = new Produto("Mouse Ã³ptico", "made by Multilaser", 18.0);
-		Produto p2 = new Produto("iPhone 6", "made by Apple", 2000.0);
-		estoque.adicionar(1, p1);
-		estoque.adicionar(2, p2);
+		Produto mouse = new Produto("Mouse óptico", "made by Multilaser", 18.0);
+		Produto iphone = new Produto("iPhone 6", "made by Apple", 2000.0);
+		estoque.adicionar(1, mouse);
+		estoque.adicionar(2, iphone);
+		System.out.println(estoque.toString());
+		
+		Negocio.venda(jose, estoque, 1);
+		System.out.println(listaClientes.toString());
+		System.out.println(estoque.toString());
+
+		Negocio.venda(joao, estoque, 2);
+		System.out.println(listaClientes.toString());
+		System.out.println(estoque.toString());
 	}
 
 }
