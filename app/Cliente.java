@@ -3,7 +3,9 @@ package app;
 import framework.Usuario;
 
 public class Cliente extends Usuario {
+
 	private double carteira;
+	private Lista listaCompras;
 	
 	public Cliente() {
 		super();
@@ -29,4 +31,13 @@ public class Cliente extends Usuario {
 	public void setCarteira(double d) {
 		carteira = d;
 	}
+
+	public Lista getListaCompras() {
+		return listaCompras;
+	}
+
+	public void setListaCompras(Lista reg) {
+		listaCompras = reg;
+	}
+
 }

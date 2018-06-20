@@ -3,10 +3,11 @@ package framework;
 import app.Cliente;
 
 public class Venda extends Transacao {
-	Produto p;
-	int valor;
+	
+	private Produto p;
+	private int valor;
 
-	Venda (Cliente vendedor, Cliente comprador, Produto prod){
+	public Venda(Cliente vendedor, Cliente comprador, Produto prod) {
 		super(vendedor,comprador);
 		p = prod;
 	}

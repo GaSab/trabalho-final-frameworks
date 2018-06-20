@@ -5,11 +5,12 @@ import java.util.Map;
 
 public class Registro {
 	
-	protected Map<Integer, Elemento> reg = new HashMap<Integer, Elemento>();
+	protected Map<Integer, Elemento> reg;
 
 	public Registro() {
+		reg = new HashMap<Integer, Elemento>();
 		// exemplo
-		reg.put(1, new Produto("Mouse óptico", "made by Multilaser", 18.0));
+		// reg.put(1, new Produto("Mouse óptico", "made by Multilaser", 18.0));
 	}
 	
 	public void adicionar(Integer i, Elemento e) {
