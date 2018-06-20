@@ -1,6 +1,6 @@
 
 abstract public class Elemento {
-	private protected String nome;
+	protected String nome;
 	
 	public Elemento() {
 	}
