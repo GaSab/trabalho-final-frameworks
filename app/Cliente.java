@@ -1,6 +1,6 @@
 package app;
 
-import classes.Usuario;
+import framework.Usuario;
 
 public class Cliente extends Usuario {
 	private double carteira;
